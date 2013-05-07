@@ -1,3 +1,10 @@
+/** 
+* Author       : Teriusray
+* Created date : 2013/05/06
+* Version      : 1.0
+* CopyRright (c) 2013 Teriusray
+* All right reserved.
+*/ 
 package annotations;
 
 import java.lang.annotation.ElementType;

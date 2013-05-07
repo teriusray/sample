@@ -1,3 +1,11 @@
+/** 
+* Author       : Teriusray
+* Created date : 2013/05/06
+* Version      : 1.0
+* CopyRright (c) 2013 Teriusray
+* All right reserved.
+*/ 
+
 import java.lang.reflect.Method;
 import play.GlobalSettings;
 import play.mvc.Action;
@@ -24,16 +32,16 @@ public class Global extends GlobalSettings {
 		}
 
 		@Override
-		public Result call(Context arg0) throws Throwable {
+		public Result call(Context context) throws Throwable {
 			if (method.isAnnotationPresent(SkipAuth.class)) {
 				System.out.println("Skip");
-				return this.delegate.call(arg0);
+				return this.delegate.call(context);
 			}
 			
 			//This is where your Auth code presents
 			System.out.println("Auth");
 
-			return this.delegate.call(arg0);
+			return this.delegate.call(context);
 		}
 	}
 
